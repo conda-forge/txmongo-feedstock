@@ -1,5 +1,5 @@
 {% set name = "txmongo" %}
-{% set version = "18.2.0" %}
+{% set version = "19.1.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 20ab4dfc5323e183233f87242a1425dfc08c1ef5657b2e08fc143808965b60b8
+  sha256: e353b49f2c1f09848b43538b2c7e6ecece4423e2623d9fad24a3352c288608fc
 
 build:
   noarch: python
