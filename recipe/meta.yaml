@@ -19,7 +19,7 @@ requirements:
     - pip
     - python
   run:
-    - pymongo >=3.0
+    - pymongo >=3.0,<4.0
     - python
     - twisted >=14.0
 
