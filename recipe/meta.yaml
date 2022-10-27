@@ -1,26 +1,26 @@
 {% set name = "txmongo" %}
-{% set version = "19.1.0" %}
+{% set version = "19.2.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e353b49f2c1f09848b43538b2c7e6ecece4423e2623d9fad24a3352c288608fc
+  sha256: c1bfae5c46e37030b46643ed976b41122f78a3648958a7b1a3190eb6374a357e
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
-    - pymongo >=3.0
-    - python
+    - pymongo >=3.0,<4.0
+    - python >=3.6
     - twisted >=14.0
 
 test:
