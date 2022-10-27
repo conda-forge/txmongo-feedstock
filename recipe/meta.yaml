@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - pymongo >=3.0,<4.0
-    - python
+    - python >=3.6
     - twisted >=14.0
 
 test:
