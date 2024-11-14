@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 035acd8f6b12f25ac9b486dd8a6102d23896faaab9dc95c6ac7797b4bee6797b
 
 build:
@@ -16,11 +16,12 @@ build:
 
 requirements:
   host:
+    - python {{ python_min }}
     - pip
-    - python >=3.6
+    - setuptools
   run:
+    - python >={{ python_min }}
     - pymongo >=3.0,<4.0
-    - python >=3.6
     - twisted >=14.0
 
 test:
