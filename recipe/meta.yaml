@@ -1,5 +1,5 @@
 {% set name = "txmongo" %}
-{% set version = "25.0.0" %}
+{% set version = "26.0.0" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 997ea63d0c4084aeed7f3d33aec983412f8871f6c9e53c6cbe427b6b886f2ce0
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9e530e73d770c3d1d44357463d7055b605869f8d3aab4f0c86b37be20d450488
 
 build:
   noarch: python
